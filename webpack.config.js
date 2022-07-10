@@ -63,9 +63,9 @@ module.exports = (env, argv) => {
       config.output.path = path.join(foundryConfig.data_folder, 'modules', 'journal-theme');
     }
     
-    config.devtool = "inline-source-map";
+    //config.devtool = "inline-source-map";
     config.watch = true;
-    config.mode = "development";
+    config.mode = "none";
   }
 
   console.log(`Generating files at: ${config.output.path}`);
