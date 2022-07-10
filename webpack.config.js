@@ -2,7 +2,7 @@ const path = require('path');
 const fileSystem = require('fs-extra');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const { isReadable } = require('stream');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 /**
  * Retrieves info about the Foundry installed in the system in JSON format.
@@ -26,20 +26,46 @@ module.exports = (env, argv) => {
     context: __dirname,
     mode: "none",
     entry: "./src/index.js",
+    module: {
+      rules: [
+        {
+          test: /\.scss$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: "css-loader",
+              options: {
+                url: false,
+                sourceMap: true,
+              },
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        },
+      ],
+    },
     plugins: [
-      new CleanWebpackPlugin( {cleanStaleWebpackAssets: false}),
+      new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+      new MiniCssExtractPlugin({
+        filename: "src/styles/main.css",
+      }),
       new CopyPlugin({
-        patterns:[
-          { from: 'module.json', to: 'module.json'},
-          { from: 'assets', to: 'assets'}
-        ]
+        patterns: [
+          { from: "module.json", to: "module.json" },
+          { from: "assets", to: "assets" },
+        ],
       }),
     ],
     output: {
       filename: "main.js",
-      path: path.resolve(__dirname, "dist")
-    }
-  }
+      path: path.resolve(__dirname, "dist"),
+    },
+  };
 
   const isProduction = argv.mode === 'production';
   const foundryConfig = getFoundryConfig();
