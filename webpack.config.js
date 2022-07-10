@@ -24,45 +24,29 @@ function getFoundryConfig() {
 module.exports = (env, argv) => {
   let config = {
     context: __dirname,
-    mode: "none",
-    entry: "./src/index.js",
+    entry: path.resolve(__dirname, "./src/index.js"),
     module: {
       rules: [
         {
-          test: /\.scss$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: "css-loader",
-              options: {
-                url: false,
-                sourceMap: true,
-              },
-            },
-            {
-              loader: "sass-loader",
-              options: {
-                sourceMap: true,
-              },
-            },
-          ],
-        },
+          test: /\.(c|sa|sc)ss$/,
+          use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader', 'sass-loader']
+        }
       ],
     },
     plugins: [
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
       new MiniCssExtractPlugin({
-        filename: "src/styles/main.css",
+        filename: "journal-theme.css"
       }),
       new CopyPlugin({
         patterns: [
-          { from: "module.json", to: "module.json" },
+          { from: "module.json" },
           { from: "assets", to: "assets" },
-        ],
+        ]
       }),
     ],
     output: {
-      filename: "main.js",
+      filename: "journal-theme.bundle.js",
       path: path.resolve(__dirname, "dist"),
     },
   };
@@ -70,7 +54,9 @@ module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
   const foundryConfig = getFoundryConfig();
 
-  if (!isProduction) {
+  if (isProduction) {
+    config.mode = "production";
+  } else {
     console.log(`Dev build detected.`);
 
     if (foundryConfig !== undefined) {
@@ -79,7 +65,9 @@ module.exports = (env, argv) => {
     
     config.devtool = "inline-source-map";
     config.watch = true;
+    config.mode = "development";
   }
+
   console.log(`Generating files at: ${config.output.path}`);
 
   return config;

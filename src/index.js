@@ -8,3 +8,5 @@ Hooks.on('init', () => {
 Hooks.on('readu', () => {
     console.log(`Game is ready now, time to use Journal Theme`);
 });
+
+require('./styles/journal-theme.scss');
