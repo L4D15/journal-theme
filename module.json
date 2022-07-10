@@ -1,0 +1,23 @@
+{
+    "name": "journal-theme",
+    "title": "Journal Theme",
+    "description": "Custom theme for journal entries.",
+    "author": "Ladis",
+    "version": "1.0.0",
+    "minimumCoreVersion": "9",
+    "styles": [
+        "styles/main.css"
+    ],
+    "languages":[
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json" 
+        },
+        {
+            "lang": "es",
+            "name": "Español",
+            "path": "lang/es.json"
+        }
+    ]
+}
