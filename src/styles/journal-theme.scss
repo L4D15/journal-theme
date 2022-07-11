@@ -25,7 +25,10 @@ $color-table-header: #343a40;
 $color-table-alternate-row: rgba(52, 58, 64, .2);
 
 $color-link-border: #ECD078;
-$color-link-background: rgba(236,208,120,.2);
+$color-link-background: rgba(236,208,120,.1);
+
+$color-roll-border: #802dcc;
+$color-roll-background: rgba(128,45,204,.1);
 
 .journal-sheet.journal-theme {
     font-size: 1rem;
@@ -188,6 +191,21 @@ $color-link-background: rgba(236,208,120,.2);
         border: 1px solid $color-link-border;
         border-radius: 5px;
         background: $color-link-background;
+
+        i.fas {
+            color: $color-link-border;
+        }
+    }
+
+    a.inline-roll,
+    a.roll {
+        border: 1px solid $color-roll-border;
+        border-radius: 5px;
+        background: $color-roll-background;
+
+        i.fas {
+            color: $color-roll-border;
+        }
     }
 }
 
