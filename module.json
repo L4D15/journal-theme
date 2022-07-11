@@ -3,7 +3,7 @@
   "title": "Journal Theme",
   "description": "Custom theme for journal entries.",
   "author": "Ladis",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "minimumCoreVersion": "9",
   "styles": ["./journal-theme.css"],
   "esmodules": ["journal-theme.bundle.js"],
@@ -20,6 +20,6 @@
     }
   ],
   "url": "https://github.com/L4D15/journal-theme",
-  "download": "https://github.com/L4D15/journal-theme/releases/download/1.1.0/journal-theme.zip"
   "manifest": "https://raw.githubusercontent.com/L4D15/journal-theme/master/module.json",
+  "download": "https://github.com/L4D15/journal-theme/releases/download/1.1.1/journal-theme.zip"
 }
