@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap');
+
+$color-background: rgb(27, 29, 31);
+
+$font-primary-text: 'Signika', serif;
+$font-primary-title: 'Modesto Condensed', serif;
+$font-secondary-title: "Amiri", serif;
+$font-secret: 'Signika', serif;
+
+$color-primary-text: hsla(0,0%,100%,.87);
+$color-primary-title: #f7f3e8;
+$color-secondary-title: #e7d1b1;
+$color-tertiary-title: #f7f3e8;
+
+$color-border-primary: #e7d1b1;
+$color-border-secondary: #ECD07899;
+
+$color-quote-border: #e7d1b1;
+$color-quote-background: rgba(231, 209, 177, .1);
+
+$color-border-secret: #802dcc;
+$color-background-secret: rgba(128,45,204,.1);
+
+$color-table-header: #343a40;
+$color-table-alternate-row: rgba(52, 58, 64, .2);
+
+$color-link-border: #ECD078;
+$color-link-background: rgba(236,208,120,.2);
+
+.journal-sheet.journal-theme {
+    font-size: 1rem;
+}
+
+.journal-theme.mce-content-body {
+    font-size: 1rem;
+}
+
+.journal-theme .window-content {
+    padding: 8px;
+}
+
+.journal-theme .window-content,
+.journal-theme.mce-content-body {
+    background: $color-background;
+    font-family: $font-primary-text;
+    line-height: 1.25;
+    color: $color-primary-text;
+
+    input, button {
+        color: $color-primary-text;
+    }
+    
+    .editor-content {
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-family: $font-primary-title;
+        font-weight: 900;
+        color: $color-primary-title;
+        font-size: 2.5rem;
+        border-bottom: 3px solid $color-primary-title;
+        text-transform: uppercase;
+        margin-bottom: 0.3rem;
+        margin-top: 0.3rem;
+        padding: 0;
+    }
+    
+    h2 {
+        font-family: $font-primary-title;
+        font-weight: 600;
+        font-size: 2.3rem;
+        color: $color-secondary-title;
+        border: none;
+        font-variant: small-caps;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+    }
+    
+    h3 {
+        font-family: $font-secondary-title;
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: $color-secondary-title;
+        margin-bottom: 0.2rem;
+        margin-top: 0.5rem;
+        border-bottom: 2px solid $color-border-primary;
+    }
+    
+    h4 {
+        font-family: $font-secondary-title;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $color-secondary-title;
+        margin-bottom: 0;
+        margin-top: 0.4rem;
+        text-transform: none;
+    }
+    
+    h5 {
+        font-family: $font-secondary-title;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: $color-tertiary-title;
+        margin-bottom: 0;
+        margin-top: 0.4rem;
+        text-transform: none;
+    }
+    
+    h6 {
+        font-family: $font-secondary-title;
+        font-weight: bold;
+        font-size: 1rem;
+        color: $color-primary-text;
+        margin-bottom: 0;
+        margin-top: 0.4rem;
+        text-transform: none;
+    }
+    
+    p {
+        font-size: 1rem;
+        margin-block-start: 0.7em;
+        margin-block-end: 0.7em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        color: $color-primary-text;
+
+        img {
+            border: 1px solid $color-link-border;
+            border-radius: 5px;
+        }
+    }
+
+    ul, ol {
+        font-size: 1rem;
+    }
+
+    blockquote {
+        font-family: $font-primary-text;
+        font-style: italic;
+        margin: 0.2rem;
+        padding: 0.5rem 0.5rem;
+        border: 2px solid $color-quote-border;
+        background-color: $color-quote-background;
+    }
+
+    .secret {
+        font-family: $font-secret;
+        font-style: normal;
+        margin: 0.1em;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+        padding: 0.5rem 0.5rem;
+        background-color: $color-background-secret;
+        border: 2px dashed $color-border-secret;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid $color-border-primary;
+    }
+
+    table {
+        border: none;
+        border-collapse: collapse;
+        thead {
+            background-color: $color-table-header;
+            color: white;
+            border-spacing: 2px;
+            border: none;
+            font-style: bold;
+        }
+
+        tr, td {
+            border: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: $color-table-alternate-row;
+        }
+
+        tbody {
+        }
+    }
+
+    a.content-link {
+        border: 1px solid $color-link-border;
+        border-radius: 5px;
+        background: $color-link-background;
+    }
+}
+

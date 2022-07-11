@@ -5,7 +5,8 @@
   "author": "Ladis",
   "version": "1.0.0",
   "minimumCoreVersion": "9",
-  "styles": ["styles/main.css"],
+  "styles": ["./journal-theme.css"],
+  "esmodules": ["journal-theme.bundle.js"],
   "languages": [
     {
       "lang": "en",
