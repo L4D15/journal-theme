@@ -41,7 +41,7 @@ module.exports = (env, argv) => {
       new CopyPlugin({
         patterns: [
           { from: "module.json" },
-          { from: "assets", to: "assets" },
+          //{ from: "assets", to: "assets" },
         ]
       }),
     ],
