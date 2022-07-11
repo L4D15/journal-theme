@@ -5,7 +5,6 @@ export class SimpleJournalSheet extends JournalSheet {
     static get defaultOptions() {
         const options = super.defaultOptions;
         options.classes.push("journal-theme");
-        options.width = 500;
         return options;
     }
 
