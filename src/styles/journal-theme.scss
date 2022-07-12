@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 
 $color-background: #ECE9E4;
 
 $font-primary-text: 'Signika', serif;
 $font-primary-title: 'Modesto Condensed', serif;
-$font-secondary-title: "Amiri", serif;
+$font-secondary-title: 'Montserrat', sans-serif;
 $font-secret: 'Signika', serif;
 
 $color-primary-text: #393636;
@@ -15,9 +16,11 @@ $color-tertiary-title: #394b8a;
 $color-border-primary: #73503a;
 $color-border-secondary: #ECD07899;
 
+$color-quote: #73503a;
 $color-quote-border: #73503a;
 $color-quote-background: #e9e4dc;
 
+$color-secret: #802dcc;
 $color-border-secret: #802dcc;
 $color-background-secret: rgba(128,45,204,.1);
 
@@ -63,27 +66,27 @@ $color-roll-background: rgba(128,45,204,.1);
         font-weight: 900;
         color: $color-primary-title;
         font-size: 2.5rem;
-        border-bottom: 3px solid $color-primary-title;
         text-transform: uppercase;
         margin-bottom: 0.3rem;
         margin-top: 0.3rem;
         padding: 0;
+        border: none;
     }
     
     h2 {
         font-family: $font-primary-title;
         font-weight: 600;
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: $color-secondary-title;
         border: none;
-        font-variant: small-caps;
+        text-transform: uppercase;
         margin-bottom: 0;
         margin-top: 0.5rem;
     }
     
     h3 {
         font-family: $font-secondary-title;
-        font-weight: bold;
+        font-weight: 800;
         font-size: 1.5rem;
         color: $color-secondary-title;
         margin-bottom: 0.2rem;
@@ -93,7 +96,7 @@ $color-roll-background: rgba(128,45,204,.1);
     
     h4 {
         font-family: $font-secondary-title;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 1.3rem;
         color: $color-secondary-title;
         margin-bottom: 0;
@@ -103,7 +106,7 @@ $color-roll-background: rgba(128,45,204,.1);
     
     h5 {
         font-family: $font-secondary-title;
-        font-weight: bold;
+        font-weight: 800;
         font-size: 1.2rem;
         color: $color-tertiary-title;
         margin-bottom: 0;
@@ -113,7 +116,7 @@ $color-roll-background: rgba(128,45,204,.1);
     
     h6 {
         font-family: $font-secondary-title;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 1rem;
         color: $color-primary-text;
         margin-bottom: 0;
@@ -148,13 +151,17 @@ $color-roll-background: rgba(128,45,204,.1);
 
     blockquote {
         font-family: $font-primary-text;
-        font-style: italic;
+        font-style: normal;
         margin: 0.2rem;
         padding: 0.5rem 0.5rem;
         border: none;
         border-top: 1px solid $color-quote-border;
         border-bottom: 1px solid $color-quote-border;
         background-color: $color-quote-background;
+        
+        p {
+            color: $color-quote;
+        }
     }
 
     .secret {
@@ -166,6 +173,10 @@ $color-roll-background: rgba(128,45,204,.1);
         padding: 0.5rem 0.5rem;
         background-color: $color-background-secret;
         border: 2px dashed $color-border-secret;
+        
+        p {
+            color: $color-secret;
+        }
     }
 
     hr {
@@ -176,6 +187,7 @@ $color-roll-background: rgba(128,45,204,.1);
     table {
         border: none;
         border-collapse: collapse;
+        background: none;
         thead {
             background-color: $color-table-header;
             color: white;
