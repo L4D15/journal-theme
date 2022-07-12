@@ -1,31 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap');
 
-$color-background: rgb(27, 29, 31);
+$color-background: #ECE9E4;
 
 $font-primary-text: 'Signika', serif;
 $font-primary-title: 'Modesto Condensed', serif;
 $font-secondary-title: "Amiri", serif;
 $font-secret: 'Signika', serif;
 
-$color-primary-text: hsla(0,0%,100%,.87);
-$color-primary-title: #f7f3e8;
-$color-secondary-title: #e7d1b1;
-$color-tertiary-title: #f7f3e8;
+$color-primary-text: #393636;
+$color-primary-title: #394b8a;
+$color-secondary-title: #4d381c;
+$color-tertiary-title: #394b8a;
 
-$color-border-primary: #e7d1b1;
+$color-border-primary: #73503a;
 $color-border-secondary: #ECD07899;
 
-$color-quote-border: #e7d1b1;
-$color-quote-background: rgba(231, 209, 177, .1);
+$color-quote-border: #73503a;
+$color-quote-background: #e9e4dc;
 
 $color-border-secret: #802dcc;
 $color-background-secret: rgba(128,45,204,.1);
 
-$color-table-header: #343a40;
-$color-table-alternate-row: rgba(52, 58, 64, .2);
+$color-table-header: #394b8a;
+$color-table-row: transparent;
+$color-table-alternate-row: rgba(57, 75, 138, .2);
 
-$color-link-border: #ECD078;
-$color-link-background: rgba(236,208,120,.1);
+$color-link-border: #1070E5;
+$color-link-background: rgba(16,112,229,.1);
 
 $color-roll-border: #802dcc;
 $color-roll-background: rgba(128,45,204,.1);
@@ -150,7 +151,9 @@ $color-roll-background: rgba(128,45,204,.1);
         font-style: italic;
         margin: 0.2rem;
         padding: 0.5rem 0.5rem;
-        border: 2px solid $color-quote-border;
+        border: none;
+        border-top: 1px solid $color-quote-border;
+        border-bottom: 1px solid $color-quote-border;
         background-color: $color-quote-background;
     }
 
@@ -183,6 +186,10 @@ $color-roll-background: rgba(128,45,204,.1);
 
         tr, td {
             border: none;
+        }
+
+        tr:nth-child(odd) {
+            background-color: $color-table-row;
         }
 
         tr:nth-child(even) {
